@@ -33,6 +33,13 @@ $ apktool d -rs myapp.apk -o mod    # https://ibotpeaches.github.io/Apktool/
 $ mono_unbundle mod/lib/armeabi-v7a/libmonodroid_bundle_app.so dlls/
 ```
 
+# Docker
+```
+docker build . -t mono-unbundle
+docker run -v C:/Users/user/Downloads/app/lib/arm64-v8a:/host mono-unbundle
+
+```
+
 ## Wishlist
 
 * [ ] Binary patching DLLs into the bundle.
